@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>frout shop (map example)</h2>
+    <p id="demo"></p>
+    <script>
+
+        const fruits = new Map([
+            ["Apple",500],
+            ["bnana",300],
+            ["orange",200],
+            ["grapes",300],
+            ["mango",300],
+            ["mango",300]
+        ]);
+
+        let inventory = "";
+        for (const [fruit, quality] of fruits) {
+            inventory += `${fruit} : ${quality} pieces<br>`;
+
+        }
+
+        document.getElementById("demo").innerHTML = inventory;
+    </script>
+</body>
+</html>

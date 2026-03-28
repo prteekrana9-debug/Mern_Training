@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//🔹 JavaScript Objects
+//👉 An object is like a box where you can store related information (properties) and actions (methods).
+
+const car = {
+  name: "Fiat",
+  model: "500",
+  color: "white",
+  start: function() { console.log("Car started"); },
+  drive: function() { console.log("Car is driving"); }
+};
+
+console.log(car.name);   // Fiat
+car.start();             // Car started
+car.drive();             // Car is driving
+// 🛠️ Real-life analogy:
+
+// Properties = car’s details (color, weight).
+
+// Methods = car’s actions (start, stop).
+
+// 2️⃣ Ways to Create Objects
+// 📌 Object Literal (easiest & most common)
+
+const person_1 = { firstName: "John", lastName: "Doe", age: 30 };
+
+//📌 Empty Object + Adding Properties Later
+
+const person_2 = {};
+person_2.firstName = "John";
+person_2.lastName = "Doe";
+
+// 3️⃣ Accessing Object Properties
+
+// Two ways:
+
+person.firstName;      // Dot notation
+person["lastName"];    // Bracket notation
+
+// 4️⃣ Object Methods
+
+// A method is just a function stored inside an object.
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+console.log(person.fullName()); // John Doe
+
+// 🛠️ Real-life analogy:
+// If properties are "nouns" (name, age), then methods are "verbs" (walk, talk, eat).
+
+// 5️⃣ Constructor Functions (for many objects)
+
+// If you want to create many similar objects, use a constructor.
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+const father = new Person("John", "Doe", 50, "blue");
+const mother = new Person("Sally", "Rally", 48, "green");
+
+// 🛠️ Real-life analogy:
+// Think of a blueprint for a house.
+
+// The blueprint = constructor function.
+
+// Each house built = new object.
+
+    </script>
+</body>
+</html>
+

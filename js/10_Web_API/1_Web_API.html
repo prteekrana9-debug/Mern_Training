@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Fnd my location (Browser API)</h2>
+    <button onclick="getLocation()">Get location</button>
+    <p id="demo"></p>
+
+    <script>
+        const myElement = Document.getElementById("demo");
+
+        function getLocation() {
+             // Check if browser supports location API
+             if (navigator.geolocation) {
+                myElement.innerHTML = "getting your location...";
+                navigator.geolocation.getCurrentPosition(showposition);
+             } else {
+                
+             }
+        }
+    </script>
+</body>
+</html>
