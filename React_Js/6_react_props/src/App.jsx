@@ -66,30 +66,30 @@
 
 //Sibling → Sibling (Indirect via Parent)
 
-import { useState } from "react";
-import AddStudent from "./AddStudent";
-import StudentList from "./StudentList";
+// import { useState } from "react";
+// import AddStudent from "./AddStudent";
+// import StudentList from "./StudentList";
 
-function App() {
-  const [students, setStudents] = useState(["Manish", "Rahul"]);
+// function App() {
+//   const [students, setStudents] = useState(["Manish", "Rahul"]);
 
-  function addNewStudent(name) {
-    console.log("New student received from AddStudent:", name);
-    setStudents([...students, name]);
-  }
+//   function addNewStudent(name) {
+//     console.log("New student received from AddStudent:", name);
+//     setStudents([...students, name]);
+//   }
 
-  return (
-    <div>
-      <h1>Task 4: Sibling to Sibling</h1>
+//   return (
+//     <div>
+//       <h1>Task 4: Sibling to Sibling</h1>
 
-      <AddStudent sendStudentToParent={addNewStudent} />
+//       <AddStudent sendStudentToParent={addNewStudent} />
 
-      <StudentList students={students} />
-    </div>
-  );
-}
+//       <StudentList students={students} />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 // // //Grandchild → Parent (Pass Function Downwards)
